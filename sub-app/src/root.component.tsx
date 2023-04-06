@@ -1,3 +1,6 @@
 export default function Root(props) {
-  return <section>{props.name} is mounted!</section>;
+  return <section style={{backgroundColor: 'red'}}>
+    <p>{props.name} is mounted!</p>
+    <div id='angular-app'></div>
+    </section>;
 }

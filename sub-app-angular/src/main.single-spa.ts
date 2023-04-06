@@ -15,6 +15,7 @@ import { singleSpaPropsSubject } from './single-spa/single-spa-props';
 // }
 
 const lifecycles = singleSpaAngular({
+  domElementGetter: () => document.getElementById('angular-app') as HTMLElement,
   bootstrapFunction: singleSpaProps => {
     singleSpaPropsSubject.next(singleSpaProps);
     return platformBrowserDynamic(getSingleSpaExtraProviders()).bootstrapModule(AppModule);
