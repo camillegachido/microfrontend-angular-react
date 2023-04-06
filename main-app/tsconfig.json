@@ -2,6 +2,7 @@
   "extends": "ts-config-single-spa",
   "files": ["src/CamilleBuus-root-config.js"],
   "compilerOptions": {
+    "jsx": "react",
     "declarationDir": "dist"
   },
   "include": ["src/**/*"],
