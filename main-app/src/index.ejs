@@ -42,20 +42,24 @@
   <!-- <script type="systemjs-importmap" src="/importmap.json"></script> -->
 
   <% if (isLocal) { %>
-  <script type="systemjs-importmap">
-    {
-      "imports": {
-        "@CamilleBuus/root-config": "//localhost:9000/CamilleBuus-root-config.js"
+    <script type="systemjs-importmap">
+      {
+        "imports": {
+          "react": "https://cdn.jsdelivr.net/npm/react@16.13.1/umd/react.development.js",
+          "react-dom": "https://cdn.jsdelivr.net/npm/react-dom@16.13.1/umd/react-dom.development.js",
+          "@CamilleBuus/root-config": "//localhost:9000/CamilleBuus-root-config.js",
+          "@CamilleBuus/sub-app": "http://localhost:8080/CamilleBuus-sub-app.js",
+          "@CamilleBuus/sub-app-angular": "http://localhost:4200/main.js"
+        }
       }
-    }
-  </script>
-  <% } %>
+    </script>
+    <% } %>
 
   <!--
     If you need to support Angular applications, uncomment the script tag below to ensure only one instance of ZoneJS is loaded
     Learn more about why at https://single-spa.js.org/docs/ecosystem-angular/#zonejs
   -->
-  <!-- <script src="https://cdn.jsdelivr.net/npm/zone.js@0.11.3/dist/zone.min.js"></script> -->
+  <script src="https://cdn.jsdelivr.net/npm/zone.js@0.11.3/dist/zone.min.js"></script>
 
   <script src="https://cdn.jsdelivr.net/npm/import-map-overrides@2.2.0/dist/import-map-overrides.js"></script>
   <% if (isLocal) { %>

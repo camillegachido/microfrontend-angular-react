@@ -1,6 +1,6 @@
 {
   "extends": "ts-config-single-spa",
-  "files": ["src/CamilleBuus-root-config.ts"],
+  "files": ["src/CamilleBuus-root-config.js"],
   "compilerOptions": {
     "declarationDir": "dist"
   },
