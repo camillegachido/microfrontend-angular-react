@@ -15,7 +15,3 @@ registerApplication({
 start({
   urlRerouteOnly: true,
 });
-
-start({
-  urlRerouteOnly: true,
-});
